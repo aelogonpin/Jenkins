@@ -1,0 +1,3 @@
+Para crear un entorno docker de jenkins tendremos que utilizar este comando
+teniendo ya instalado en nuestro sistema docker:
+"docker run -d -p 8080:8080 -p 50000:50000 -p 9080:9080 -e JENKINS_OPTS="--httpPort=9080" --name jenkins jenkins/jenkins:lts"
