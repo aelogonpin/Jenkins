@@ -1,3 +1,24 @@
 Para crear un entorno docker de jenkins tendremos que utilizar este comando
 teniendo ya instalado en nuestro sistema docker:
 "docker run -d -p 8080:8080 -p 50000:50000 -p 9080:9080 -e JENKINS_OPTS="--httpPort=9080" --name jenkins jenkins/jenkins:lts"
+
+
+
+Comando para cargar jenkins desde cli:
+"java -jar jenkins-cli.jar -s http://192.168.0.31:8080/ -auth admin:1234 -webSocket help"
+
+
+Comando para saber quien soy con autentificación:
+"java -jar jenkins-cli.jar -s http://192.168.0.31:8080/ -auth admin:1234 who-am-i"
+
+Comando para saber quien soy sin autentificación "anonimo":
+"java -jar jenkins-cli.jar -s http://192.168.0.31:8080/ who-am-i"
+
+Comando para saber la version de jenkins: 
+"java -jar jenkins-cli.jar -s http://192.168.0.31:8080/ -auth admin:1234 version"
+
+Comando para saber la sesion de jenkins:
+"jenkinscli session-id"
+
+Como crear el alias para el jenkins:
+alias jenkinscli="java -jar jenkins-cli.jar -s http://192.168.0.31:8080/ -auth admin:1234"
