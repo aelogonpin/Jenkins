@@ -22,3 +22,7 @@ Comando para saber la sesion de jenkins:
 
 Como crear el alias para el jenkins:
 alias jenkinscli="java -jar jenkins-cli.jar -s http://192.168.0.31:8080/ -auth admin:1234"
+
+Token jenkins
+"1148ebeba86c70047862ce070ad9674864" Esto servira para iniciar sesion con el token para el CLI.
+
